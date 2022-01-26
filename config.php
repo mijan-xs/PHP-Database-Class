@@ -195,7 +195,7 @@ class Database
     {
         $sql = 'SELECT * FROM '.$table_name;
         $query = $this->query($sql);
-        while($row = $query->fetch_array()){
+        while($row = $query->fetch_assoc()){
             $results[] = $row;
         }
         return $results;
